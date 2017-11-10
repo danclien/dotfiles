@@ -1,0 +1,12 @@
+[user]
+	email = dan@danclien.com
+	name = Dan Lien
+[merge]
+	tool = p4merge
+[diff]
+	tool = p4merge
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

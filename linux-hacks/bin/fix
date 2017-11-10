@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [[ $1 == "mouse" ]]; then
+  echo Restarting 'psmouse'
+  sudo modprobe -r psmouse 
+  sudo modprobe psmouse
+elif [[ $1 == "wifi" ]]; then
+  echo Restarting 'network-manager'
+  sudo service network-manager restart
+fi
+

@@ -1,0 +1,28 @@
+'.source.js':
+  'console.dir':
+    'prefix': ';dir'
+    'body': 'console.dir(${1:"crash"});$2'
+  'jest.describe':
+    'prefix': '`jdes'
+    'body': """
+      describe('${1:Thing to test}', () => {
+        test('${2:This should work}', () => {
+          const input = ${3:true}
+          const result = ${4:func(input)}
+          const expected = ${5:true}
+
+          expect(result).toEqual(expected)
+        })
+      })
+    """
+  'jest.test':
+    'prefix': '`jtest'
+    'body': """
+      test('${2:This should work}', () => {
+        const input = ${3:true}
+        const result = ${4:func(input)}
+        const expected = ${5:true}
+
+        expect(result).toEqual(expected)
+      })
+    """

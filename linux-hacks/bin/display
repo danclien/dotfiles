@@ -1,0 +1,30 @@
+#!/bin/bash
+
+if [[ $1 == "internal" ]]; then
+  xrandr --output HDMI2 --off --output DP1-8 --off
+
+  cat $HOME/.config/i3/config.base \
+      $HOME/.config/i3/config.internal > $HOME/.config/i3/config
+elif [[ $1 == "hdmiclone" ]]; then
+  xrandr --output eDP1  --mode 1920x1080 --rotate normal \
+         --output HDMI2 --mode 1920x1080 --same-as eDP1
+
+  cat $HOME/.config/i3/config.base \
+      $HOME/.config/i3/config.internal > $HOME/.config/i3/config
+elif [[ $1 == "mdp" ]]; then
+  xrandr --output DP1-8 --mode 3440x1440 --pos 0x0 --rotate normal \
+         --output eDP1  --mode 1920x1080 --pos 755x1440 --rotate normal
+
+  cat $HOME/.config/i3/config.base \
+      $HOME/.config/i3/config.mdp > $HOME/.config/i3/config
+elif [[ $1 == "hdmi" ]]; then
+  xrandr --output HDMI2 --mode 3440x1440 --pos 0x0 --rotate normal \
+         --output eDP1  --mode 1920x1080 --pos 755x1440 --rotate normal
+
+  cat $HOME/.config/i3/config.base \
+      $HOME/.config/i3/config.hdmi > $HOME/.config/i3/config  
+fi
+
+# Fix wallpapers
+nitrogen --restore
+i3-msg reload
