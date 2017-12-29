@@ -157,14 +157,14 @@ set $urgent-bg-color     #E53935ff
 
 bar {
 	id bar-0
-	i3bar_command i3bar -t
+	i3bar_command i3bar
         tray_output primary
 	height 24
 	position top
 	workspace_buttons no
 	output primary
 	colors {
-		background #00000088
+		background #000000
 	}
 }
 
