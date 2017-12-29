@@ -1,0 +1,4 @@
+#!/bin/sh
+# /etc/rc.local
+
+powertop --auto-tune
