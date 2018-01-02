@@ -54,6 +54,7 @@ values."
      shell-default-position 'bottom)
      spell-checking
      syntax-checking
+     theming
      themes-megapack
      version-control
      (haskell :variables haskell-enable-hindent-style "johan-tibell")
@@ -308,8 +309,13 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
-  (custom-set-variables '(spacemacs-theme-custom-colors
-                          '((bg1 . "#000000"))))
+  (spacemacs/toggle-transparency 1)
+  (setq theming-modifications '(
+                                ;; requires the theming layer
+                                (ample
+                                 (default :background "#000000" :foreground "#fdf4c1")
+                                 )
+                                ))
   )
 
 (defun dotspacemacs/user-config ()
@@ -319,11 +325,10 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
-  (spacemacs/toggle-transparency 1)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
-;; auto-generate custom variable definitions.
+;; auto-generate custom variable definitions .
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
