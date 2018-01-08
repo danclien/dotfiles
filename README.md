@@ -6,11 +6,12 @@
     stow emacs
     stow git
     stow i3
-    stow linux-hacks
     stow nitrogen
+    stow personal
+    stow sqlyog
     stow zsh
     ```
 4. For the `system` directory, copy all the files over:
     ```
-    sudo cp -R ~/dotfiles/system/* ~/temp/stow-test
+    sudo cp -R ~/dotfiles/system/* /
     ```
