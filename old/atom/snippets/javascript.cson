@@ -1,4 +1,0 @@
-'.source.js':
-  'console.dir':
-    'prefix': 'dir'
-    'body': 'console.dir(${1:"crash"});$2'
