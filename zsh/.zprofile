@@ -45,8 +45,13 @@ export ONEPASSWORD_KEYCHAIN='/home/dacali/Dropbox/1Password/Main.agilekeychain'
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
 
+alias shortdate='date "+%Y-%m-%d"'
+# Copy YYYY-mm-dd into the clipboard
+# 'tr' is used to remove the trailing newline
+alias copydate='date "+%Y-%m-%d" | tr -d "\\n" | xclip -selection clipboard -in'
+
 #
-# Vangrant
+# Vagrant
 #
 export VAGRANT_DEFAULT_PROVIDER='lxc'
 
@@ -77,6 +82,10 @@ export TERMINAL='terminator'
 # Git
 
 alias gitcd='cd $(git rev-parse --show-toplevel)'
+alias gitcb='git rev-parse --abbrev-ref HEAD'
+
+# The Unarchiver
+alias unar='unar -d'
 
 #
 # Language
