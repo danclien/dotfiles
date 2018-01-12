@@ -247,7 +247,7 @@ workspace 10 output HDMI2
 
 # i3 Appearence
 # Border
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 4
 for_window [class="albert"] border pixel 0
 
 # i3-gaps
