@@ -18,7 +18,7 @@ export SSH_MASTER_KEY=/home/dacali/.ssh/master.pem
 alias si='stack ghci --test'
 
 # Simple HTTP Server
-alias webserve='python -m SimpleHTTPServer 2000'
+alias webserve='busybox httpd -f -p 127.0.0.1:2000'
 
 # xdg-open
 alias xopen='xdg-open'
@@ -54,6 +54,8 @@ alias copydate='date "+%Y-%m-%d" | tr -d "\\n" | xclip -selection clipboard -in'
 # Vagrant
 #
 export VAGRANT_DEFAULT_PROVIDER='lxc'
+alias vup='vagrant up; vagrant ssh'
+alias vssh='vagrant ssh'
 
 #
 # JDK (Java)
@@ -86,6 +88,11 @@ alias gitcb='git rev-parse --abbrev-ref HEAD'
 
 # The Unarchiver
 alias unar='unar -d'
+
+# apt
+
+alias aptup='sudo apt update && apt list --upgradable'
+alias aptmanual='comm -23 <(apt-mark showmanual | sort -u) <(gzip -dc /var/log/installer/initial-status.gz | sed -n "s/^Package: //p" | sort -u)'
 
 #
 # Language
