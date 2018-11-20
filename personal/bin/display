@@ -23,6 +23,8 @@ elif [[ $1 == "mdp" ]]; then
   xrandr --output DP1-8 --mode 3440x1440 --pos 0x0 --rotate normal --primary \
          --output eDP1  --mode 1920x1080 --pos 755x1440 --rotate normal
 
+  move_workspaces_to_output 1 8 DP1-8
+  move_workspaces_to_output 11 18 eDP1
 elif [[ $1 == "hdmi" ]]; then
   xrandr --output HDMI2 --mode 3440x1440 --pos 0x0 --rotate normal --primary \
          --output eDP1  --mode 1920x1080 --pos 755x1440 --rotate normal
