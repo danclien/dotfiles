@@ -158,3 +158,5 @@ fi
 TMPPREFIX="${TMPDIR%/}/zsh"
 
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.npm/bin:$PATH"
+export PATH="./node_modules/.bin:$PATH"
