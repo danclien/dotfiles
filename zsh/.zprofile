@@ -14,6 +14,11 @@ fi
 export TLDR_DEBUG=1
 export SSH_MASTER_KEY=/home/dacali/.ssh/master.pem
 
+# LXD
+function lxd-enter() {
+  lxc exec $1 -- sudo --login --user ubuntu
+}
+
 # Stack
 alias si='stack ghci --test'
 
