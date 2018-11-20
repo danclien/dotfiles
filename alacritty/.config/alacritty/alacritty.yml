@@ -296,8 +296,8 @@ key_bindings:
   - { key: PageDown, mods: Shift,   action: ScrollPageDown               }
   - { key: End,      mods: Shift,   action: ScrollToBottom               }
   - { key: Home,     mods: Shift,   action: ScrollToTop                  }
-  - { key: K,        mods: Control, action: ClearHistory                 }
-  - { key: K,        mods: Control, chars: "\x0c"                        }
+  - { key: G,        mods: Control|Shift, action: ClearHistory                 }
+  - { key: G,        mods: Control|Shift, chars: "\x0c"                        }
 
 # Mouse bindings
 #
