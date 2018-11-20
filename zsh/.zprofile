@@ -22,6 +22,10 @@ function lxd-enter() {
 # Stack
 alias si='stack ghci --test'
 
+# Purescript
+alias p=pulp --psc-package
+alias pp=psc-package
+
 # Simple HTTP Server
 alias webserve='busybox httpd -f -p 127.0.0.1:2000'
 
