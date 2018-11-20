@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
+FILE="$DIR/restore-extensions"
+
+echo Saving to $FILE
+$DIR/list-extensions > $FILE
+chmod +x $FILE
