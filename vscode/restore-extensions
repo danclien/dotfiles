@@ -22,6 +22,7 @@ code --install-extension mrmlnc.vscode-scss
 code --install-extension ms-vsliveshare.vsliveshare
 code --install-extension msjsdiag.debugger-for-chrome
 code --install-extension naumovs.color-highlight
+code --install-extension naumovs.theme-oceanicnext
 code --install-extension Orta.vscode-jest
 code --install-extension PeterJausovec.vscode-docker
 code --install-extension pflannery.vscode-versionlens
